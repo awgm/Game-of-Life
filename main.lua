@@ -83,10 +83,9 @@ function love.draw()
     local y2 = math.ceil(y/ch)
     love.graphics.rectangle ('line', x2*(cw)-cw,y2*(ch)-ch, ch,cw)
   --end
-  love.graphics.setColor (255,255,255)
-  love.graphics.print ("population "..game.getPopulation (map), 10, 10)
-  love.graphics.print ("generations "..time, 10, 20)
+    love.graphics.setColor (255,255,0)
+    love.graphics.print ("generations "..time.." population "..game.getPopulation (map), 10, 10)
   if paused == true then
-    love.graphics.print ("Press space to pause or unpause, left mouse button to add living cells, and right mouse to 'kill' cells", 10, 30)
+    love.graphics.print ("SPACEBAR = PAUSE, LMB = ADD CELL, RMB = KILL CELL, R = RESET", 10, 30)
   end
 end
