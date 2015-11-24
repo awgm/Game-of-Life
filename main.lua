@@ -1,4 +1,4 @@
-local w, h = 120, 80
+local w, h = 240, 180
 local dw, dh = love.graphics.getDimensions()
 local cw, ch = dw/w, dh/h
 
@@ -14,6 +14,12 @@ function love.keypressed (key)
       paused = true
     end
   end
+  if paused == true then
+    if key == 'r' then
+      map = game.random(w,h)
+    end
+  end
+  if key == 'escape' then love.event.quit () end
   return paused
 end
 
