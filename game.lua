@@ -23,6 +23,16 @@ function game.random(w, h)
   return map
 end
 
+function game.blank(w, h)
+  local map = game.new(w, h)
+  for i = 1, w do
+    for j = 1, h do
+      map[i][j] = 0
+    end
+  end
+  return map
+end
+
 -- neighbors table
 local dirs = { {-1,-1}, {0,-1}, {1,-1}, {-1,0}, {1,0}, {-1,1}, {0,1}, {1,1} }
 
